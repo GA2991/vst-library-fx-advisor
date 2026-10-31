@@ -8,6 +8,8 @@ const { vendors: VENDORS, freeTags: FREE_TAGS } = JSON.parse(fs.readFileSync(pat
 
 // Cuántos niveles de carpeta se suben buscando una carpeta con nombre de fabricante.
 const VENDOR_DIR_DEPTH = 3;
+// Carpetas contenedoras: al llegar a una se deja de subir (lo de encima, p. ej. "Steinberg\VSTPlugins", es el host).
+const CONTAINER_DIR = /^(vst|vst2|vst3|vst64|vstplugins|plugins?|plug-ins|common files|program files( \(x86\))?|win64|x64)$/i;
 
 const SINGULAR = {
   Synths: 'Sintetizador',
@@ -92,6 +94,7 @@ export function detectVendor(group) {
   for (const file of group.files ?? []) {
     let dir = file.parentDir;
     for (let i = 0; i < VENDOR_DIR_DEPTH && dir; i += 1) {
+      if (CONTAINER_DIR.test(path.basename(dir))) break;
       const vendor = vendorByName(path.basename(dir));
       if (vendor) return publicName(vendor);
       const parent = path.dirname(dir);

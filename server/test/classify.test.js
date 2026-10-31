@@ -103,3 +103,15 @@ describe('exact product keys', () => {
     expect(detectLicense('Dexed', '')).toBe('Free');
   });
 });
+
+describe('vendor folders vs. container folders', () => {
+  it('stops at generic plugin folders like VSTPlugins', () => {
+    const g = group('Addictive Keys.dll', path.join('C:', 'Program Files', 'Steinberg', 'VSTPlugins'));
+    expect(detectVendor(g)).toBe('XLN Audio');
+  });
+
+  it('still finds vendor folders inside generic folders', () => {
+    const g = group('HALion Sonic.vst3', path.join('C:', 'Program Files', 'Common Files', 'VST3', 'Steinberg'));
+    expect(detectVendor(g)).toBe('Steinberg');
+  });
+});
