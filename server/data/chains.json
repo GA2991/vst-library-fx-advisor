@@ -1,0 +1,104 @@
+[
+  {
+    "id": "lead-vocal",
+    "name": "Voz principal limpia",
+    "description": "Voz al frente, clara y controlada.",
+    "icon": "mic-vocal",
+    "steps": [
+      { "id": "gain", "label": "Ganancia / Utility", "category": "Utilities", "keywords": ["utility", "gain", "trim"], "why": "Nivela la entrada para que el resto de la cadena trabaje en su punto dulce." },
+      { "id": "eq-cut", "label": "EQ sustractiva", "category": "EQs", "keywords": ["eq", "equalizer", "parametric"], "why": "Quita graves inútiles y resonancias antes de comprimir." },
+      { "id": "comp", "label": "Compresor", "category": "Compressors", "keywords": ["la-2a", "la2a", "opto", "1176", "vocal"], "why": "Controla la dinámica para que la voz se mantenga delante." },
+      { "id": "deess", "label": "De-esser", "category": "Compressors", "keywords": ["de-ess", "deess", "sibil"], "why": "Doma las sibilantes que la compresión hace más evidentes." },
+      { "id": "sat", "label": "Saturación suave", "category": "Saturators/Distortion", "keywords": ["tape", "tube", "warm", "preamp"], "why": "Añade armónicos y presencia sin subir el volumen." },
+      { "id": "space", "label": "Reverb / Delay en envío", "category": "Reverbs/Delays", "keywords": ["plate", "delay", "echo"], "why": "Da espacio en un canal de envío sin ensuciar la voz seca." }
+    ]
+  },
+  {
+    "id": "backing-vocals",
+    "name": "Coros / Voces de fondo",
+    "description": "Anchos, suaves y detrás de la voz principal.",
+    "icon": "users",
+    "steps": [
+      { "id": "eq-cut", "label": "EQ con pasa-altos", "category": "EQs", "keywords": ["filter", "eq", "sweep"], "why": "Recorta graves y medios para que no compitan con la voz principal." },
+      { "id": "comp", "label": "Compresión firme", "category": "Compressors", "keywords": ["opto", "la-2a", "vocal"], "why": "Iguala las tomas para que el coro suene como un bloque." },
+      { "id": "deess", "label": "De-esser", "category": "Compressors", "keywords": ["de-ess", "deess", "sibil"], "why": "Las eses de varias voces se acumulan; suavízalas más que en la principal." },
+      { "id": "width", "label": "Ensanchado / Doubler", "category": "Modulation", "keywords": ["doubler", "double", "chorus", "microshift", "ensemble"], "why": "Abre las voces a los lados y deja el centro libre." },
+      { "id": "space", "label": "Reverb más larga", "category": "Reverbs/Delays", "keywords": ["hall", "room", "plate"], "why": "Más reverb que la principal para mandarlos al fondo." }
+    ]
+  },
+  {
+    "id": "bass-di",
+    "name": "Bajo directo",
+    "description": "Bajo grabado por línea, firme y definido.",
+    "icon": "guitar",
+    "steps": [
+      { "id": "eq-cut", "label": "EQ correctiva", "category": "EQs", "keywords": ["eq", "pultec"], "why": "Limpia subgraves sobrantes y realza el ataque de la púa o los dedos." },
+      { "id": "comp", "label": "Compresor", "category": "Compressors", "keywords": ["1176", "fet", "la-2a", "opto"], "why": "Mantiene cada nota al mismo nivel para un low-end estable." },
+      { "id": "sat", "label": "Saturación / Amp", "category": "Saturators/Distortion", "keywords": ["amp", "ampeg", "bass", "tube", "drive"], "why": "Genera armónicos para que el bajo se oiga también en altavoces pequeños." },
+      { "id": "mono", "label": "Graves en mono", "category": "Utilities", "keywords": ["basslane", "mono", "utility"], "why": "Centra los graves para que la mezcla sea sólida en cualquier sistema." },
+      { "id": "meter", "label": "Analizador", "category": "Utilities", "keywords": ["analyzer", "span", "spectrum"], "why": "Comprueba que el grave no se pise con el bombo." }
+    ]
+  },
+  {
+    "id": "kick",
+    "name": "Kick",
+    "description": "Golpe con cuerpo y ataque.",
+    "icon": "drum",
+    "steps": [
+      { "id": "eq", "label": "EQ de bombo", "category": "EQs", "keywords": ["pultec", "eq", "sub"], "why": "Realza el golpe grave y el clic, y quita la caja de cartón hacia 300 Hz." },
+      { "id": "transient", "label": "Transient shaper", "category": "Compressors", "keywords": ["transient", "punch"], "why": "Acentúa el ataque para que el bombo corte." },
+      { "id": "comp", "label": "Compresión", "category": "Compressors", "keywords": ["1176", "fet", "drum"], "why": "Controla picos y da pegada constante." },
+      { "id": "sat", "label": "Saturación / Clipper", "category": "Saturators/Distortion", "keywords": ["clip", "clipper", "saturat"], "why": "Más volumen percibido sin subir los picos." }
+    ]
+  },
+  {
+    "id": "snare-punchy",
+    "name": "Snare punchy",
+    "description": "Ataque, cuerpo y algo de sala.",
+    "icon": "drum",
+    "steps": [
+      { "id": "eq", "label": "EQ correctiva", "category": "EQs", "keywords": ["eq", "pultec"], "why": "Limpia la caja y realza el cuerpo hacia 200 Hz y el chasquido arriba." },
+      { "id": "transient", "label": "Transient shaper", "category": "Compressors", "keywords": ["transient", "punch"], "why": "Acentúa el ataque para que corte en la mezcla." },
+      { "id": "comp", "label": "Compresor", "category": "Compressors", "keywords": ["1176", "fet", "drum"], "why": "Ataque lento y release rápido para más pegada." },
+      { "id": "sat", "label": "Saturación", "category": "Saturators/Distortion", "keywords": ["tape", "tube", "saturat", "drive"], "why": "Engorda la caja y la hace sonar más cara." },
+      { "id": "room", "label": "Reverb de sala corta", "category": "Reverbs/Delays", "keywords": ["room", "plate", "chamber"], "why": "Pone la caja en un espacio sin alargar demasiado la cola." }
+    ]
+  },
+  {
+    "id": "electric-guitar",
+    "name": "Guitarra eléctrica",
+    "description": "Amp, control y espacio.",
+    "icon": "guitar",
+    "steps": [
+      { "id": "amp", "label": "Amp / Distorsión", "category": "Saturators/Distortion", "keywords": ["amp", "rig", "drive", "fuzz"], "why": "Si grabaste por línea, aquí está el amplificador; si no, un empujón de drive." },
+      { "id": "eq", "label": "EQ", "category": "EQs", "keywords": ["eq", "filter"], "why": "Quita graves que se pisan con el bajo y agudos ásperos." },
+      { "id": "comp", "label": "Compresión ligera", "category": "Compressors", "keywords": ["opto", "la-2a"], "why": "Suaviza los picos sin aplastar la dinámica de la interpretación." },
+      { "id": "mod", "label": "Modulación", "category": "Modulation", "keywords": ["chorus", "phaser", "flanger", "tremolo"], "why": "Opcional: movimiento y anchura para limpias y arpegios." },
+      { "id": "space", "label": "Delay / Reverb", "category": "Reverbs/Delays", "keywords": ["delay", "echo", "spring", "tape"], "why": "Profundidad; un delay corto engorda sin ocupar mucho." }
+    ]
+  },
+  {
+    "id": "ambient-pads",
+    "name": "Pads ambientales",
+    "description": "Movimiento, anchura y colas largas.",
+    "icon": "waves",
+    "steps": [
+      { "id": "eq", "label": "EQ con pasa-altos", "category": "EQs", "keywords": ["filter", "eq"], "why": "Deja los graves al bajo y al bombo." },
+      { "id": "mod", "label": "Modulación", "category": "Modulation", "keywords": ["chorus", "ensemble", "phaser", "flanger"], "why": "Movimiento lento para que el pad respire." },
+      { "id": "sat", "label": "Textura lo-fi", "category": "Saturators/Distortion", "keywords": ["lofi", "tape", "vinyl", "cassette"], "why": "Opcional: un poco de desgaste para darle carácter." },
+      { "id": "space", "label": "Reverb grande", "category": "Reverbs/Delays", "keywords": ["shimmer", "supermassive", "hall", "cloud"], "why": "Colas largas y envolventes para crear el ambiente." }
+    ]
+  },
+  {
+    "id": "mix-bus",
+    "name": "Bus de mezcla",
+    "description": "Pegamento final, con cuidado.",
+    "icon": "sliders-horizontal",
+    "steps": [
+      { "id": "eq", "label": "EQ suave", "category": "EQs", "keywords": ["pultec", "slick", "tilt", "baxandall"], "why": "Retoques amplios de tono; nada quirúrgico." },
+      { "id": "glue", "label": "Compresor de bus", "category": "Compressors", "keywords": ["bus", "glue", "ssl", "kotelnikov"], "why": "1–2 dB de reducción para que todo suene unido." },
+      { "id": "sat", "label": "Saturación de cinta / consola", "category": "Saturators/Distortion", "keywords": ["tape", "console", "tube"], "why": "Calidez y cohesión analógica." },
+      { "id": "meter", "label": "Medidor de loudness", "category": "Utilities", "keywords": ["loudness", "lufs", "meter"], "why": "Controla el nivel y deja margen para el mastering." }
+    ]
+  }
+]

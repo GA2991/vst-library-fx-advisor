@@ -1,0 +1,1985 @@
+{
+  "freeTags": [
+    "free",
+    "lite",
+    "le",
+    "ce"
+  ],
+  "vendors": [
+    {
+      "name": "FabFilter",
+      "aliases": [
+        "FabFilter"
+      ],
+      "prefixes": [
+        "fabfilter"
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "proq": {
+          "category": "EQs",
+          "description": "EQ paramétrica de referencia con analizador en tiempo real, modo dinámico y Mid/Side. Precisa y muy rápida de usar."
+        },
+        "proc2": {
+          "category": "Compressors",
+          "description": "Compresor versátil con estilos que van de transparente a agresivo; sirve para voces, bus y mastering."
+        },
+        "proc3": {
+          "category": "Compressors",
+          "description": "Compresor versátil con estilos que van de transparente a agresivo; sirve para voces, bus y mastering."
+        },
+        "prol": {
+          "category": "Compressors",
+          "description": "Limitador de mastering transparente con medición de loudness completa."
+        },
+        "promb": {
+          "category": "Compressors",
+          "description": "Compresor/expansor multibanda flexible para controlar zonas concretas del espectro."
+        },
+        "prods": {
+          "category": "Compressors",
+          "description": "De-esser inteligente que detecta sibilantes de voz con mucha precisión."
+        },
+        "prog": {
+          "category": "Compressors",
+          "description": "Puerta de ruido y expansor con detección avanzada; útil en baterías y voces."
+        },
+        "pror": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb algorítmica natural y fácil de ajustar con controles musicales."
+        },
+        "timeless": {
+          "category": "Reverbs/Delays",
+          "description": "Delay de cinta con filtros y modulación muy completa."
+        },
+        "saturn": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación y distorsión multibanda, desde calidez de cinta hasta destrucción total."
+        },
+        "volcano": {
+          "category": "EQs",
+          "description": "Filtros creativos con modulación, ideales para barridos y movimiento."
+        },
+        "twin": {
+          "category": "Synths",
+          "description": "Sintetizador sustractivo con matriz de modulación flexible."
+        }
+      }
+    },
+    {
+      "name": "Valhalla DSP",
+      "aliases": [
+        "Valhalla DSP",
+        "ValhallaDSP",
+        "Valhalla"
+      ],
+      "prefixes": [
+        "valhalla"
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "valhallasupermassive": {
+          "category": "Reverbs/Delays",
+          "license": "Free",
+          "description": "Reverbs y delays enormes y evolutivos. Perfecto para pads, ambientes y colas cinematográficas."
+        },
+        "valhallafreqecho": {
+          "category": "Reverbs/Delays",
+          "license": "Free",
+          "description": "Delay analógico con desplazamiento de frecuencia, para ecos raros y efectos de dub."
+        },
+        "valhallaspacemodulator": {
+          "category": "Modulation",
+          "license": "Free",
+          "description": "Flanger/modulador con carácter espacial, para movimiento sutil o extremo."
+        },
+        "valhallavintageverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb inspirada en las unidades digitales clásicas de los 70 y 80. Un estándar en estudios."
+        },
+        "valhallaroom": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de sala natural, muy buena para dar espacio realista a instrumentos."
+        },
+        "valhallaplate": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de placa densa y brillante, clásica en voces y cajas."
+        },
+        "valhallashimmer": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb con desplazamiento de tono que crea colas etéreas tipo shimmer."
+        },
+        "valhalladelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay con modos de cinta, BBD, digital y más, de sonido muy musical."
+        },
+        "valhallaubermod": {
+          "category": "Modulation",
+          "description": "Delay multi-tap modulado para chorus, ensembles y texturas."
+        }
+      }
+    },
+    {
+      "name": "Xfer Records",
+      "aliases": [
+        "Xfer Records",
+        "Xfer"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "serum": {
+          "category": "Synths",
+          "description": "Sintetizador wavetable muy popular en electrónica, con editor visual de ondas."
+        },
+        "ott": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresión multibanda ascendente y descendente muy agresiva; da brillo y densidad al instante."
+        },
+        "lfotool": {
+          "category": "Modulation",
+          "description": "Modulación por LFO dibujable para sidechain simulado, volumen y filtros."
+        }
+      }
+    },
+    {
+      "name": "u-he",
+      "aliases": [
+        "u-he",
+        "uhe"
+      ],
+      "prefixes": [
+        "u-he"
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "diva": {
+          "category": "Synths",
+          "description": "Sintetizador analógico virtual con modelado de circuitos; sonido muy cálido."
+        },
+        "zebra2": {
+          "category": "Synths",
+          "description": "Sintetizador modular muy flexible, usado mucho en bandas sonoras."
+        },
+        "zebralette": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Versión gratuita y reducida de Zebra2 con un oscilador muy versátil."
+        },
+        "zebrify": {
+          "category": "Modulation",
+          "description": "Efectos de Zebra2 (filtros, modulación y más) como plugin independiente."
+        },
+        "hive": {
+          "category": "Synths",
+          "description": "Sintetizador rápido y ligero orientado a sonidos electrónicos modernos."
+        },
+        "repro": {
+          "category": "Synths",
+          "description": "Emulación de sintetizadores Sequential clásicos."
+        },
+        "tyrelln6": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Sintetizador analógico virtual gratuito, sencillo y con buen carácter."
+        },
+        "podolski": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Sintetizador virtual analógico gratuito y ligero."
+        },
+        "presswerk": {
+          "category": "Compressors",
+          "description": "Compresor muy completo capaz de sonar transparente o con mucho color."
+        },
+        "satin": {
+          "category": "Saturators/Distortion",
+          "description": "Emulación de grabadora de cinta muy detallada."
+        },
+        "protoverb": {
+          "category": "Reverbs/Delays",
+          "license": "Free",
+          "description": "Reverb experimental gratuita que evoluciona con el uso."
+        }
+      }
+    },
+    {
+      "name": "Native Instruments",
+      "aliases": [
+        "Native Instruments",
+        "NI"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "kontakt": {
+          "category": "Samplers",
+          "description": "Sampler de referencia: carga librerías de instrumentos (pianos, orquestas, baterías…)."
+        },
+        "battery": {
+          "category": "Samplers",
+          "description": "Sampler de baterías con rejilla de celdas para montar kits rápidamente."
+        },
+        "massive": {
+          "category": "Synths",
+          "description": "Sintetizador wavetable clásico del bass music y la electrónica."
+        },
+        "massivex": {
+          "category": "Synths",
+          "description": "Sucesor de Massive con wavetables modernas y modulación avanzada."
+        },
+        "fm8": {
+          "category": "Synths",
+          "description": "Sintetizador FM potente para campanas, bajos y pads metálicos."
+        },
+        "reaktor": {
+          "category": "Synths",
+          "description": "Entorno modular para crear y usar instrumentos y efectos."
+        },
+        "guitarrig": {
+          "category": "Saturators/Distortion",
+          "description": "Simulador de amplificadores y pedales de guitarra; también sirve como rack de efectos creativos."
+        },
+        "kompletekontrol": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Navegador y host para instrumentos NKS con teclados Kontrol."
+        },
+        "supercharger": {
+          "category": "Compressors",
+          "description": "Compresor a válvulas de un solo mando, rápido para dar pegada y color."
+        },
+        "replika": {
+          "category": "Reverbs/Delays",
+          "description": "Delay creativo con modos vintage, modernos y de difusión."
+        },
+        "raum": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb creativa con modos de sala realista y espacios irreales."
+        },
+        "monark": {
+          "category": "Synths",
+          "description": "Emulación de un sintetizador monofónico clásico."
+        },
+        "choral": {
+          "category": "Modulation",
+          "description": "Chorus y ensemble con carácter vintage."
+        },
+        "phasis": {
+          "category": "Modulation",
+          "description": "Phaser con efectos clásicos y modernos."
+        }
+      }
+    },
+    {
+      "name": "Waves",
+      "aliases": [
+        "Waves",
+        "Plug-Ins V11",
+        "Plug-Ins V12",
+        "Plug-Ins V13",
+        "Plug-Ins V14"
+      ],
+      "prefixes": [
+        "waves "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "c1": {
+          "category": "Compressors",
+          "description": "Compresor/puerta/expansor clásico de Waves, muy versátil."
+        },
+        "l1": {
+          "category": "Compressors",
+          "description": "Limitador/maximizador clásico para subir el volumen final."
+        },
+        "l2": {
+          "category": "Compressors",
+          "description": "Maximizador brickwall usado durante años en mastering."
+        },
+        "=deesser": {
+          "category": "Compressors",
+          "description": "De-esser sencillo y eficaz para controlar sibilantes."
+        },
+        "=doubler": {
+          "category": "Modulation",
+          "description": "Duplicación artificial de pistas para engordar voces e instrumentos."
+        },
+        "=enigma": {
+          "category": "Modulation",
+          "description": "Procesador de modulación experimental con filtros y feedback."
+        },
+        "irl": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb por convolución basada en respuestas al impulso."
+        },
+        "maxxbass": {
+          "category": "Saturators/Distortion",
+          "description": "Genera armónicos del grave para que el bajo se oiga en altavoces pequeños."
+        },
+        "mondomod": {
+          "category": "Modulation",
+          "description": "Modulación combinada de amplitud, frecuencia y panorama."
+        },
+        "okphatter": {
+          "category": "Compressors",
+          "description": "Procesador de un mando que da cuerpo y grosor a la señal."
+        },
+        "paz": {
+          "category": "Utilities",
+          "description": "Analizador de frecuencias, estéreo y niveles."
+        },
+        "q10": {
+          "category": "EQs",
+          "description": "EQ paramétrica de 10 bandas, quirúrgica."
+        },
+        "rcomp": {
+          "category": "Compressors",
+          "description": "Compresor Renaissance, suave y musical."
+        },
+        "renaxx": {
+          "category": "Compressors",
+          "description": "Compresor Renaissance Axx, pensado para guitarras y voces."
+        },
+        "req": {
+          "category": "EQs",
+          "description": "EQ Renaissance de curvas suaves."
+        },
+        "s1": {
+          "category": "Utilities",
+          "description": "Imager estéreo para ensanchar o estrechar la imagen."
+        },
+        "supertap": {
+          "category": "Reverbs/Delays",
+          "description": "Delay multi-tap para ecos rítmicos complejos."
+        },
+        "trueverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb que simula espacios reales con primeras reflexiones."
+        },
+        "berzerkdistortion": {
+          "category": "Saturators/Distortion",
+          "description": "Distorsión agresiva para guitarras, sintes y efectos."
+        },
+        "abbeyroadtgmasteringchain": {
+          "category": "Utilities",
+          "description": "Cadena de mastering EMI TG de Abbey Road: EQ, compresión y limitación con color vintage."
+        },
+        "tgfilters": {
+          "category": "EQs",
+          "description": "Filtros de la consola EMI TG."
+        },
+        "tglimiter": {
+          "category": "Compressors",
+          "description": "Limitador de la consola EMI TG."
+        },
+        "tgtone": {
+          "category": "EQs",
+          "description": "Ecualizador tonal de la consola EMI TG."
+        },
+        "tginput": {
+          "category": "Saturators/Distortion",
+          "description": "Etapa de entrada de la consola EMI TG, para color analógico."
+        },
+        "artgmeterbridge": {
+          "category": "Utilities",
+          "description": "Medidores VU de la consola EMI TG."
+        },
+        "studiorack": {
+          "category": "Utilities",
+          "description": "Rack para cargar cadenas de plugins de Waves."
+        },
+        "cla2a": {
+          "category": "Compressors",
+          "description": "Emulación del compresor óptico LA-2A."
+        },
+        "cla76": {
+          "category": "Compressors",
+          "description": "Emulación del compresor 1176, rápido y con pegada."
+        },
+        "hdelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay híbrido con sabor analógico y sincronía al tempo."
+        },
+        "rverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb Renaissance ligera y fácil."
+        },
+        "vocalrider": {
+          "category": "Utilities",
+          "description": "Automatiza el volumen de la voz para mantenerla siempre delante."
+        }
+      }
+    },
+    {
+      "name": "iZotope",
+      "aliases": [
+        "iZotope"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "ozoneequalizer": {
+          "category": "EQs",
+          "description": "EQ de mastering de alta precisión con modos analógico y digital, y procesamiento Mid/Side."
+        },
+        "ozoneimager": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Imager estéreo gratuito para controlar la anchura por bandas."
+        },
+        "ozone": {
+          "category": "Utilities",
+          "description": "Suite de mastering con asistente: EQ, compresión, imagen estéreo y limitador en un solo plugin."
+        },
+        "neutron": {
+          "category": "Utilities",
+          "description": "Tira de canal de mezcla con asistente que propone EQ, compresión y saturación."
+        },
+        "nectar": {
+          "category": "Utilities",
+          "description": "Tira de canal para voces: EQ, compresión, de-esser, afinación y efectos."
+        },
+        "vinyl": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Simula el sonido de vinilo: ruido, crujidos y desgaste, para texturas lo-fi."
+        },
+        "vocaldoubler": {
+          "category": "Modulation",
+          "license": "Free",
+          "description": "Duplica la voz de forma natural para hacerla más ancha y gruesa."
+        },
+        "trash": {
+          "category": "Saturators/Distortion",
+          "description": "Distorsión multibanda creativa con filtros y convolución."
+        },
+        "rx": {
+          "category": "Utilities",
+          "description": "Herramientas de restauración de audio: quita ruido, clics y zumbidos."
+        }
+      }
+    },
+    {
+      "name": "Soundtoys",
+      "aliases": [
+        "Soundtoys",
+        "SoundToys"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "echoboyjr": {
+          "category": "Reverbs/Delays",
+          "description": "Versión simplificada de EchoBoy: delays de cinta y analógicos con carácter vintage."
+        },
+        "echoboy": {
+          "category": "Reverbs/Delays",
+          "description": "Delay de referencia con decenas de estilos de ecos vintage."
+        },
+        "decapitator": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación analógica de referencia: da agresividad y presencia a cualquier pista."
+        },
+        "littleplate": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de placa EMT 140 con un solo control de decay."
+        },
+        "littleradiator": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación de preamplificador a válvulas Altec. Añade calidez y cuerpo de forma muy simple."
+        },
+        "radiator": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación de preamplificador a válvulas Altec, con EQ sencilla."
+        },
+        "littleprimaltap": {
+          "category": "Reverbs/Delays",
+          "description": "Delay digital vintage con carácter lo-fi."
+        },
+        "primaltap": {
+          "category": "Reverbs/Delays",
+          "description": "Delay digital vintage de los 80 con carácter lo-fi."
+        },
+        "littlealterboy": {
+          "category": "Modulation",
+          "description": "Cambio de tono y formante para voces."
+        },
+        "devilloc": {
+          "category": "Compressors",
+          "description": "Compresor/aplastador extremo para baterías con mucha sala."
+        },
+        "phasemistress": {
+          "category": "Modulation",
+          "description": "Phaser analógico con decenas de estilos clásicos."
+        },
+        "spaceblender": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb experimental con modulación y filtros."
+        },
+        "crystallizer": {
+          "category": "Reverbs/Delays",
+          "description": "Delay granular con inversión de tono."
+        },
+        "microshift": {
+          "category": "Modulation",
+          "description": "Ensanchador estéreo por micro-desafinación, clásico en voces."
+        },
+        "tremolator": {
+          "category": "Modulation",
+          "description": "Trémolo rítmico con patrones."
+        },
+        "filterfreak": {
+          "category": "EQs",
+          "description": "Filtros resonantes con modulación rítmica."
+        },
+        "panman": {
+          "category": "Modulation",
+          "description": "Autopan rítmico con patrones."
+        },
+        "effectrack": {
+          "category": "Utilities",
+          "description": "Rack para encadenar los efectos de Soundtoys."
+        }
+      }
+    },
+    {
+      "name": "Tokyo Dawn Records",
+      "aliases": [
+        "Tokyo Dawn Records",
+        "Tokyo Dawn Labs",
+        "TDR"
+      ],
+      "prefixes": [
+        "tdr "
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "tdrnovage": {
+          "category": "EQs",
+          "license": "Paid",
+          "description": "Versión completa de Nova: EQ dinámica con más bandas y funciones."
+        },
+        "tdrnova": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "EQ dinámica paralela gratuita: corrige resonancias solo cuando aparecen."
+        },
+        "tdrkotelnikovge": {
+          "category": "Compressors",
+          "license": "Paid",
+          "description": "Versión completa del compresor de bus Kotelnikov."
+        },
+        "tdrkotelnikov": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor de bus transparente, muy usado para pegar mezclas sin colorear el sonido."
+        },
+        "slickeqge": {
+          "category": "EQs",
+          "license": "Paid",
+          "description": "Versión completa de SlickEQ con más modelos y funciones."
+        },
+        "slickeq": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "EQ de mezcla de 3 bandas con modelos de saturación. Rápido para dar forma general a pistas y buses."
+        },
+        "tdrprism": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Analizador de espectro y medidores para revisar la mezcla."
+        },
+        "feedbackcompressor": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor de realimentación con carácter vintage."
+        },
+        "molotok": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor con carácter, bueno para baterías y bajos."
+        },
+        "limiter6": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Limitador multietapa con saturación, compresión y clipper."
+        }
+      }
+    },
+    {
+      "name": "Kilohearts",
+      "aliases": [
+        "Kilohearts",
+        "kiloHearts"
+      ],
+      "prefixes": [
+        "khs ",
+        "kilohearts"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "phaseplant": {
+          "category": "Synths",
+          "license": "Paid",
+          "description": "Sintetizador modular con módulos de efectos de Kilohearts."
+        },
+        "multipass": {
+          "category": "Utilities",
+          "license": "Paid",
+          "description": "Contenedor multibanda para cargar efectos Snapin por banda."
+        },
+        "disperser": {
+          "category": "Modulation",
+          "license": "Paid",
+          "description": "Dispersión de fase para dar pegada y textura a transitorios."
+        },
+        "faturator": {
+          "category": "Saturators/Distortion",
+          "license": "Paid",
+          "description": "Saturador para engordar sonidos."
+        },
+        "sliceeq": {
+          "category": "EQs",
+          "license": "Paid",
+          "description": "EQ paramétrica con Mid/Side y bandas dinámicas."
+        },
+        "carveeq": {
+          "category": "EQs",
+          "license": "Paid",
+          "description": "EQ dibujable de alta resolución."
+        },
+        "snapheap": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Rack gratuito para encadenar efectos de Kilohearts con modulación."
+        },
+        "khstapestop": {
+          "category": "Modulation",
+          "description": "Efecto de parada de cinta: ralentiza el audio hasta detenerlo."
+        },
+        "khstransientshaper": {
+          "category": "Compressors",
+          "description": "Moldeador de transitorios para dar ataque o suavizar el golpe."
+        },
+        "khschorus": {
+          "category": "Modulation",
+          "description": "Chorus limpio y ligero de Kilohearts para ensanchar y dar movimiento."
+        },
+        "khsdelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay sencillo con filtros y ping-pong."
+        },
+        "khsreverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb simple y limpia."
+        },
+        "khsdistortion": {
+          "category": "Saturators/Distortion",
+          "description": "Distorsión con varios modos de saturación."
+        },
+        "khslimiter": {
+          "category": "Compressors",
+          "description": "Limitador sencillo para controlar picos."
+        },
+        "khsstereo": {
+          "category": "Utilities",
+          "description": "Control de anchura estéreo y paneo."
+        }
+      }
+    },
+    {
+      "name": "MeldaProduction",
+      "aliases": [
+        "MeldaProduction",
+        "Melda Production",
+        "Melda"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "mautopitch": {
+          "category": "Utilities",
+          "description": "Corrector de afinación automático gratuito, sencillo y eficaz para voces."
+        },
+        "mtuner": {
+          "category": "Utilities",
+          "description": "Afinador para instrumentos y voces."
+        },
+        "manalyzer": {
+          "category": "Utilities",
+          "description": "Analizador de espectro gratuito muy completo."
+        },
+        "mdynamiceq": {
+          "category": "EQs",
+          "license": "Paid",
+          "description": "EQ dinámica para corregir problemas que solo aparecen a veces."
+        },
+        "mcompressor": {
+          "category": "Compressors",
+          "description": "Compresor gratuito muy configurable con visualización del nivel."
+        },
+        "mequalizer": {
+          "category": "EQs",
+          "description": "EQ paramétrica gratuita de 6 bandas."
+        },
+        "mconvolutionez": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb por convolución gratuita y fácil de usar."
+        },
+        "mstereoexpander": {
+          "category": "Utilities",
+          "description": "Ensanchador estéreo gratuito."
+        },
+        "mutility": {
+          "category": "Utilities",
+          "description": "Ganancia, fase y canales: la navaja suiza de utilidad."
+        },
+        "mloudnessanalyzer": {
+          "category": "Utilities",
+          "description": "Medidor de loudness LUFS gratuito."
+        },
+        "mstereoscope": {
+          "category": "Utilities",
+          "description": "Visualizador de imagen estéreo."
+        },
+        "moscilloscope": {
+          "category": "Utilities",
+          "description": "Osciloscopio para ver la forma de onda."
+        },
+        "mnoisegenerator": {
+          "category": "Utilities",
+          "description": "Generador de ruido para pruebas y efectos."
+        },
+        "moscillator": {
+          "category": "Utilities",
+          "description": "Generador de tonos de prueba."
+        },
+        "mfreeformphase": {
+          "category": "Utilities",
+          "description": "Ajuste libre de la fase por frecuencia."
+        },
+        "mrationmb": {
+          "category": "Compressors",
+          "license": "Paid",
+          "description": "Procesador multibanda de dinámica."
+        },
+        "mccgenerator": {
+          "category": "Utilities",
+          "description": "Genera mensajes MIDI CC para automatizar otros plugins."
+        },
+        "magc": {
+          "category": "Compressors",
+          "description": "Control automático de ganancia que mantiene un nivel constante."
+        },
+        "mcomb": {
+          "category": "Modulation",
+          "description": "Filtro de peine para efectos metálicos y de flanger."
+        }
+      }
+    },
+    {
+      "name": "Universal Audio",
+      "aliases": [
+        "Universal Audio",
+        "UAD",
+        "uaudio"
+      ],
+      "prefixes": [
+        "uaudio "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "uaudio610": {
+          "category": "Saturators/Distortion",
+          "description": "Preamplificador a válvulas 610, aporta calidez y grosor clásico."
+        },
+        "uaudiocenturychannelstrip": {
+          "category": "Utilities",
+          "description": "Tira de canal: previo a válvulas, compresor y EQ en uno."
+        },
+        "uaudiooxidetape": {
+          "category": "Saturators/Distortion",
+          "description": "Emulación de grabadora de cinta con saturación suave."
+        },
+        "uaudiopolymax": {
+          "category": "Synths",
+          "description": "Sintetizador polifónico analógico virtual de UA."
+        },
+        "uaudiopultec": {
+          "category": "EQs",
+          "description": "Emulación del EQ a válvulas Pultec. Famoso por realzar y recortar graves a la vez para un low-end grande y controlado."
+        },
+        "uaudiopureplate": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de placa clásica y densa, ideal para voces y cajas."
+        },
+        "uaudioteletronixla2a": {
+          "category": "Compressors",
+          "description": "Emulación del compresor óptico LA-2A. Compresión suave y musical, ideal para voces y bajos con muy pocos controles."
+        },
+        "uaudioua1176": {
+          "category": "Compressors",
+          "description": "Emulación del compresor FET 1176: rápido, con pegada y mucho carácter."
+        },
+        "uaudiovervees": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación y color analógico de estilo vintage."
+        }
+      }
+    },
+    {
+      "name": "IK Multimedia",
+      "aliases": [
+        "IK Multimedia",
+        "IK"
+      ],
+      "prefixes": [
+        "tr5 "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "tr5classic": {
+          "license": "Free",
+          "description": "Módulo clásico de T-RackS 5, incluido gratis en T-RackS Custom Shop."
+        },
+        "tr5comprexxor": {
+          "category": "Compressors",
+          "description": "Compresor de T-RackS con control del carácter armónico."
+        },
+        "tr5eq73": {
+          "category": "EQs",
+          "description": "EQ de estilo Neve 1073, cálida y musical."
+        },
+        "tr5eq81": {
+          "category": "EQs",
+          "description": "EQ de estilo Neve 1081 con más bandas."
+        },
+        "tr5vc670": {
+          "category": "Compressors",
+          "description": "Compresor a válvulas de estilo Fairchild 670, suave y con color."
+        },
+        "modobass": {
+          "category": "Synths",
+          "description": "Bajo eléctrico modelado físicamente, muy realista y configurable."
+        },
+        "mododrum": {
+          "category": "Samplers",
+          "description": "Batería modelada físicamente con kits personalizables."
+        },
+        "amplitube": {
+          "category": "Saturators/Distortion",
+          "description": "Simulador de amplificadores y pedales de guitarra y bajo."
+        },
+        "sampletank": {
+          "category": "Samplers",
+          "description": "Workstation de samples con muchos instrumentos."
+        }
+      }
+    },
+    {
+      "name": "Plugin Alliance",
+      "aliases": [
+        "Plugin Alliance",
+        "Brainworx"
+      ],
+      "prefixes": [
+        "bx "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "bxcleansweep": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "Filtros pasa-altos y pasa-bajos limpios para quitar graves y agudos sobrantes."
+        },
+        "bxsolo": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Utilidad para escuchar canales, Mid/Side y anchura estéreo."
+        },
+        "bxconsole": {
+          "category": "Utilities",
+          "description": "Tira de canal que emula una consola analógica."
+        },
+        "bxmasterdeskclassic": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Versión gratuita de bx_masterdesk: mastering rápido con pocos controles."
+        },
+        "bxmasterdesk": {
+          "category": "Utilities",
+          "description": "Mastering rápido de estilo analógico con pocos controles."
+        },
+        "bxmegasingle": {
+          "category": "Compressors",
+          "description": "Compresor de un solo mando para voces y baterías."
+        },
+        "bxoberhausen": {
+          "category": "Synths",
+          "description": "Emulación de sintetizador Oberheim."
+        },
+        "bxrockrack": {
+          "category": "Saturators/Distortion",
+          "description": "Amplificador de guitarra rock con cabinas."
+        },
+        "bxsubfilter": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "Refuerza o ajusta los subgraves del bombo y el bajo."
+        },
+        "bxhybrid": {
+          "category": "EQs",
+          "description": "EQ híbrida de mezcla con estilo analógico."
+        },
+        "designhg2": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación a válvulas Black Box HG-2: densidad y aire para buses y mastering."
+        },
+        "splfreeranger": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "EQ musical de cuatro bandas de SPL."
+        },
+        "shadowhills": {
+          "category": "Compressors",
+          "description": "Compresor de mastering óptico y discreto con mucho color."
+        },
+        "ampegsvtvrclassic": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Amplificador de bajo Ampeg SVT clásico."
+        },
+        "elysianiveaufilter": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "Filtro de tono inclinable para dar brillo o calidez."
+        }
+      }
+    },
+    {
+      "name": "Slate Digital",
+      "aliases": [
+        "Slate Digital"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "freshair": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "Excitador de agudos que añade aire y brillo con dos controles."
+        },
+        "vmr": {
+          "category": "Utilities",
+          "description": "Rack de módulos de mezcla de Slate."
+        }
+      }
+    },
+    {
+      "name": "Spitfire Audio",
+      "aliases": [
+        "Spitfire Audio",
+        "Spitfire"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "=labs": {
+          "category": "Samplers",
+          "license": "Free",
+          "description": "Colección gratuita de instrumentos sampleados con carácter (pianos, cuerdas, texturas)."
+        }
+      }
+    },
+    {
+      "name": "Arturia",
+      "aliases": [
+        "Arturia"
+      ],
+      "prefixes": [
+        "efx "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "analoglab": {
+          "category": "Synths",
+          "description": "Colección de presets de los sintetizadores clásicos de Arturia."
+        },
+        "pigments": {
+          "category": "Synths",
+          "description": "Sintetizador híbrido wavetable, granular y virtual analógico."
+        },
+        "efxrefract": {
+          "category": "Modulation",
+          "description": "Efecto creativo multicapa de Arturia."
+        },
+        "revplate140": {
+          "category": "Reverbs/Delays",
+          "description": "Emulación de reverb de placa EMT 140."
+        },
+        "tapemellofi": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Efecto lo-fi de cinta para desafinaciones y desgaste."
+        },
+        "filterms20": {
+          "category": "EQs",
+          "description": "Filtro del Korg MS-20 como efecto."
+        },
+        "minifilter": {
+          "category": "EQs",
+          "description": "Filtro del Minimoog como efecto."
+        }
+      }
+    },
+    {
+      "name": "Steinberg",
+      "aliases": [
+        "Steinberg"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "halionsonic": {
+          "category": "Samplers",
+          "license": "Free",
+          "description": "Workstation de samples y síntesis de Steinberg con cientos de sonidos."
+        }
+      }
+    },
+    {
+      "name": "Surge Synth Team",
+      "aliases": [
+        "Surge Synth Team"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "surgexteffects": {
+          "category": "Modulation",
+          "description": "Los efectos de Surge XT como plugin independiente."
+        },
+        "surgext": {
+          "category": "Synths",
+          "description": "Sintetizador híbrido gratuito y de código abierto, muy completo."
+        }
+      }
+    },
+    {
+      "name": "Vital Audio",
+      "aliases": [
+        "Vital Audio",
+        "Vital"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "=vital": {
+          "category": "Synths",
+          "description": "Sintetizador wavetable gratuito con modulación visual. Alternativa potente a Serum."
+        }
+      }
+    },
+    {
+      "name": "TAL Software",
+      "aliases": [
+        "TAL Software",
+        "TAL",
+        "Togu Audio Line"
+      ],
+      "prefixes": [
+        "tal-"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "talchoruslx": {
+          "category": "Modulation",
+          "description": "Chorus del Juno-60, cálido y ancho."
+        },
+        "talfilter": {
+          "category": "EQs",
+          "description": "Filtro con modulación para barridos y patrones rítmicos."
+        },
+        "talnoisemaker": {
+          "category": "Synths",
+          "description": "Sintetizador virtual analógico gratuito con buen sonido."
+        },
+        "talreverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de placa gratuita con carácter vintage."
+        },
+        "talvocoder": {
+          "category": "Modulation",
+          "description": "Vocoder clásico de estilo años 80."
+        },
+        "talbassline": {
+          "category": "Synths",
+          "description": "Emulación del SH-101 para bajos analógicos."
+        },
+        "talflanger": {
+          "category": "Modulation",
+          "description": "Flanger sencillo y ligero."
+        },
+        "talunolx": {
+          "category": "Synths",
+          "license": "Paid",
+          "description": "Emulación del Juno-60."
+        },
+        "talsampler": {
+          "category": "Samplers",
+          "license": "Paid",
+          "description": "Sampler con carácter de samplers clásicos."
+        }
+      }
+    },
+    {
+      "name": "Youlean",
+      "aliases": [
+        "Youlean"
+      ],
+      "prefixes": [
+        "youlean"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "youleanloudnessmeter": {
+          "category": "Utilities",
+          "description": "Medidor de sonoridad LUFS para ajustar el nivel final a las plataformas de streaming."
+        }
+      }
+    },
+    {
+      "name": "Voxengo",
+      "aliases": [
+        "Voxengo"
+      ],
+      "prefixes": [
+        "voxengo"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "=span": {
+          "category": "Utilities",
+          "description": "Analizador de espectro gratuito muy usado para revisar mezclas."
+        }
+      }
+    },
+    {
+      "name": "Auburn Sounds",
+      "aliases": [
+        "Auburn Sounds"
+      ],
+      "prefixes": [
+        "auburn sounds"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "graillon": {
+          "category": "Utilities",
+          "description": "Corrección de afinación y cambio de formante para voces (edición gratuita)."
+        },
+        "innerpitch": {
+          "category": "Modulation",
+          "description": "Cambio de tono de alta calidad."
+        }
+      }
+    },
+    {
+      "name": "Variety of Sound",
+      "aliases": [
+        "Variety of Sound"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "thrillseekerxtc": {
+          "category": "Saturators/Distortion",
+          "description": "Excitador/saturador que realza presencia y profundidad."
+        },
+        "thrillseekervbl": {
+          "category": "Compressors",
+          "description": "Compresor de estilo vintage con saturación."
+        },
+        "epicplate": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb de placa gratuita con sonido clásico."
+        },
+        "nastydla": {
+          "category": "Reverbs/Delays",
+          "description": "Delay de cinta sucio y con carácter."
+        },
+        "tesslapro": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación sutil de estilo transformador."
+        },
+        "ferrictds": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación de cinta con limitador suave."
+        },
+        "density": {
+          "category": "Compressors",
+          "description": "Compresor de bus con estilo analógico."
+        },
+        "nightshine": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación y color de consola para buses."
+        },
+        "baxtereq": {
+          "category": "EQs",
+          "description": "EQ de estilo Baxandall, suave y musical."
+        }
+      }
+    },
+    {
+      "name": "Fuse Audio Labs",
+      "aliases": [
+        "Fuse Audio Labs"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "vpre72": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Emulación gratuita de un previo de válvulas clásico de estudio."
+        },
+        "rsw2395c": {
+          "category": "EQs",
+          "license": "Free",
+          "description": "EQ gratuita de estilo consola de radiodifusión alemana."
+        },
+        "vrev666": {
+          "category": "Reverbs/Delays",
+          "license": "Free",
+          "description": "Reverb de muelle de pedal vintage."
+        }
+      }
+    },
+    {
+      "name": "Klanghelm",
+      "aliases": [
+        "Klanghelm"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "ivgi": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Saturación gratuita muy versátil, de sutil a agresiva."
+        },
+        "mjucjr": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor vari-mu gratuito, suave y musical."
+        },
+        "dc1a": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor de un mando gratuito y muy fácil."
+        },
+        "sdrr": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación con muchos modos y control de color."
+        }
+      }
+    },
+    {
+      "name": "Audio Damage",
+      "aliases": [
+        "Audio Damage"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "roughrider": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor gratuito agresivo para darle pegada a baterías."
+        },
+        "discord": {
+          "category": "Modulation",
+          "description": "Cambiador de tono con delay y modulación."
+        },
+        "kombinat": {
+          "category": "Saturators/Distortion",
+          "description": "Distorsión multibanda creativa."
+        },
+        "bigseq": {
+          "category": "Modulation",
+          "description": "Secuenciador de efectos con troceado rítmico."
+        }
+      }
+    },
+    {
+      "name": "Noise Engineering",
+      "aliases": [
+        "Noise Engineering"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "ruina": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Distorsión gratuita que va de suave a muy destructiva."
+        },
+        "sincvereor": {
+          "category": "Synths",
+          "description": "Sintetizador de los osciladores de Noise Engineering."
+        },
+        "virtvereor": {
+          "category": "Synths",
+          "description": "Sintetizador con osciladores de Noise Engineering."
+        }
+      }
+    },
+    {
+      "name": "Newfangled Audio",
+      "aliases": [
+        "Newfangled Audio"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "pendulate": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Sintetizador monofónico gratuito basado en un péndulo caótico."
+        },
+        "saturate": {
+          "category": "Saturators/Distortion",
+          "description": "Clipper suave con saturación."
+        }
+      }
+    },
+    {
+      "name": "Cherry Audio",
+      "aliases": [
+        "Cherry Audio"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "surrealisticmg1": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Emulación gratuita del sintetizador Moog MG-1."
+        }
+      }
+    },
+    {
+      "name": "Splice",
+      "aliases": [
+        "Splice"
+      ],
+      "prefixes": [
+        "splice"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "spliceinstrument": {
+          "category": "Samplers",
+          "description": "Instrumento de Splice con presets de sonidos."
+        }
+      }
+    },
+    {
+      "name": "UVI",
+      "aliases": [
+        "UVI"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "uviworkstation": {
+          "category": "Samplers",
+          "license": "Free",
+          "description": "Reproductor gratuito para las librerías de UVI."
+        }
+      }
+    },
+    {
+      "name": "XLN Audio",
+      "aliases": [
+        "XLN Audio"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "addictivekeys": {
+          "category": "Samplers",
+          "description": "Pianos y teclados sampleados con mucha personalidad."
+        },
+        "addictivedrums": {
+          "category": "Samplers",
+          "description": "Batería sampleada muy completa y fácil de usar."
+        },
+        "rc20": {
+          "category": "Saturators/Distortion",
+          "description": "Lo-fi vintage: ruido, wow, distorsión y degradación."
+        }
+      }
+    },
+    {
+      "name": "AIR Music Technology",
+      "aliases": [
+        "AIR Music Technology",
+        "AIR"
+      ],
+      "prefixes": [
+        "air "
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "=hybrid": {
+          "category": "Synths",
+          "description": "Sintetizador híbrido de AIR con mucho sonido moderno."
+        },
+        "velvet": {
+          "category": "Synths",
+          "description": "Pianos eléctricos clásicos modelados."
+        },
+        "minigrand": {
+          "category": "Samplers",
+          "description": "Piano acústico sampleado sencillo."
+        },
+        "xpand2": {
+          "category": "Samplers",
+          "description": "Workstation de sonidos con miles de presets."
+        },
+        "airtapedoubletrack": {
+          "category": "Modulation",
+          "description": "Duplicación de tipo cinta para engordar pistas."
+        },
+        "=electric": {
+          "category": "Synths",
+          "description": "Piano eléctrico modelado clásico."
+        }
+      }
+    },
+    {
+      "name": "Softube",
+      "aliases": [
+        "Softube"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "saturationknob": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Saturación de un solo mando gratuita, muy útil en bajos y voces."
+        }
+      }
+    },
+    {
+      "name": "Wave Arts",
+      "aliases": [
+        "Wave Arts"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "tubesaturatorvintage": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Saturación a válvulas gratuita con carácter cálido."
+        }
+      }
+    },
+    {
+      "name": "KORG",
+      "aliases": [
+        "KORG",
+        "Korg"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "ms20fx": {
+          "category": "Modulation",
+          "description": "Efectos y filtro del MS-20."
+        },
+        "ms20": {
+          "category": "Synths",
+          "description": "Emulación del sintetizador semimodular Korg MS-20."
+        },
+        "polysix": {
+          "category": "Synths",
+          "description": "Emulación del sintetizador polifónico Korg Polysix."
+        },
+        "wavestation": {
+          "category": "Synths",
+          "description": "Emulación del sintetizador vectorial Wavestation."
+        },
+        "legacycell": {
+          "category": "Synths",
+          "description": "Combinador de sintetizadores de la Korg Legacy Collection."
+        },
+        "mdex": {
+          "category": "Modulation",
+          "description": "Multiefecto de la Korg Legacy Collection."
+        },
+        "midifilter": {
+          "category": "Utilities",
+          "description": "Filtro de mensajes MIDI."
+        },
+        "=mixer1": {
+          "category": "Utilities",
+          "description": "Mezclador interno de la Korg Legacy Collection."
+        },
+        "=mixer2": {
+          "category": "Utilities",
+          "description": "Mezclador interno de la Korg Legacy Collection."
+        },
+        "=mixer3": {
+          "category": "Utilities",
+          "description": "Mezclador interno de la Korg Legacy Collection."
+        }
+      }
+    },
+    {
+      "name": "Cockos",
+      "aliases": [
+        "Cockos",
+        "ReaPlugs"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "reastream": {
+          "category": "Utilities",
+          "description": "Envía audio y MIDI entre ordenadores o programas por la red."
+        },
+        "reaeq": {
+          "category": "EQs",
+          "description": "EQ paramétrica gratuita de REAPER."
+        },
+        "reacomp": {
+          "category": "Compressors",
+          "description": "Compresor gratuito de REAPER, muy configurable."
+        },
+        "reaverb": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb por convolución de REAPER."
+        },
+        "readelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay multi-tap de REAPER."
+        }
+      }
+    },
+    {
+      "name": "ChowDSP",
+      "aliases": [
+        "ChowDSP"
+      ],
+      "prefixes": [
+        "chow"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "chowtapemodel": {
+          "category": "Saturators/Distortion",
+          "description": "Modelo físico de grabadora de cinta: saturación, wow/flutter y compresión de cinta."
+        },
+        "chowcentaur": {
+          "category": "Saturators/Distortion",
+          "description": "Emulación del pedal de overdrive Klon Centaur."
+        },
+        "chowmatrix": {
+          "category": "Reverbs/Delays",
+          "description": "Delay en árbol con muchas líneas de eco."
+        }
+      }
+    },
+    {
+      "name": "Audiomodern",
+      "aliases": [
+        "Audiomodern"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "panflow": {
+          "category": "Modulation",
+          "description": "Paneo automático dibujable para mover sonidos en el estéreo."
+        },
+        "filterstep": {
+          "category": "EQs",
+          "description": "Filtro secuenciado para patrones rítmicos."
+        },
+        "gatelab": {
+          "category": "Modulation",
+          "description": "Secuenciador de puerta para cortes rítmicos."
+        }
+      }
+    },
+    {
+      "name": "Baby Audio",
+      "aliases": [
+        "Baby Audio",
+        "BABY Audio"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "magicdice": {
+          "category": "Reverbs/Delays",
+          "license": "Free",
+          "description": "Genera reverbs y delays aleatorios con un solo botón."
+        },
+        "magicswitch": {
+          "category": "Modulation",
+          "license": "Free",
+          "description": "Chorus de un botón inspirado en el Juno-60."
+        }
+      }
+    },
+    {
+      "name": "Bedroom Producers Blog",
+      "aliases": [
+        "BPB",
+        "Bedroom Producers Blog"
+      ],
+      "prefixes": [
+        "bpb"
+      ],
+      "defaultLicense": "Free",
+      "products": {
+        "bpbsaturator": {
+          "category": "Saturators/Distortion",
+          "description": "Saturador gratuito sencillo para dar calidez."
+        },
+        "bpbbasssaturator": {
+          "category": "Saturators/Distortion",
+          "description": "Saturación específica para bajos."
+        },
+        "cassettedrums": {
+          "category": "Samplers",
+          "description": "Baterías sampleadas de cassette con carácter lo-fi."
+        },
+        "cassette606": {
+          "category": "Samplers",
+          "description": "Caja de ritmos 606 sampleada de cassette."
+        },
+        "cassette808": {
+          "category": "Samplers",
+          "description": "Caja de ritmos 808 sampleada de cassette."
+        },
+        "cassette909": {
+          "category": "Samplers",
+          "description": "Caja de ritmos 909 sampleada de cassette."
+        }
+      }
+    },
+    {
+      "name": "Techivation",
+      "aliases": [
+        "Techivation"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "tdeesser": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "De-esser inteligente que detecta y suaviza las sibilantes de voces sin apagar el brillo."
+        },
+        "tcompressor": {
+          "category": "Compressors",
+          "license": "Free",
+          "description": "Compresor automático gratuito que se ajusta solo al material."
+        }
+      }
+    },
+    {
+      "name": "Tracktion",
+      "aliases": [
+        "Tracktion"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "basslane": {
+          "category": "Utilities",
+          "license": "Free",
+          "description": "Pone en mono los graves por debajo de una frecuencia para un low-end centrado y firme."
+        }
+      }
+    },
+    {
+      "name": "FXpansion",
+      "aliases": [
+        "FXpansion",
+        "inMusic"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "bfdplayer": {
+          "category": "Samplers",
+          "license": "Free",
+          "description": "Reproductor gratuito de kits de batería acústica BFD."
+        }
+      }
+    },
+    {
+      "name": "Cymatics",
+      "aliases": [
+        "Cymatics"
+      ],
+      "prefixes": [
+        "cymatics"
+      ],
+      "defaultLicense": "Paid",
+      "products": {
+        "cymaticsmemory": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Efecto lo-fi de cinta y vinilo para dar textura vintage."
+        }
+      }
+    },
+    {
+      "name": "VAST Dynamics",
+      "aliases": [
+        "VAST Dynamics"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "vastvaporizer": {
+          "category": "Synths",
+          "description": "Sintetizador wavetable gratuito muy completo, con muchas wavetables y modulación."
+        }
+      }
+    },
+    {
+      "name": "DSK Music",
+      "aliases": [
+        "DSK Music"
+      ],
+      "prefixes": [
+        "dsk "
+      ],
+      "defaultLicense": "Free",
+      "products": {}
+    },
+    {
+      "name": "4Front",
+      "aliases": [
+        "4Front"
+      ],
+      "prefixes": [
+        "4front"
+      ],
+      "defaultLicense": "Free",
+      "products": {}
+    },
+    {
+      "name": "KV331 Audio",
+      "aliases": [
+        "KV331 Audio",
+        "KV331"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "synthmasteronefx": {
+          "category": "Modulation",
+          "description": "Los efectos de SynthMaster One como plugin."
+        },
+        "synthmasterone": {
+          "category": "Synths",
+          "description": "Sintetizador wavetable sencillo con muchos presets."
+        },
+        "synthmasterplayer": {
+          "category": "Synths",
+          "license": "Free",
+          "description": "Reproductor gratuito de presets de SynthMaster."
+        }
+      }
+    },
+    {
+      "name": "Caelum Audio",
+      "aliases": [
+        "Caelum Audio"
+      ],
+      "prefixes": [],
+      "defaultLicense": "Paid",
+      "products": {
+        "fluxmini": {
+          "category": "Modulation",
+          "license": "Free",
+          "description": "Modulador de volumen y filtro dibujable, ideal para sidechain y movimiento."
+        },
+        "tapecassette": {
+          "category": "Saturators/Distortion",
+          "license": "Free",
+          "description": "Simula una cassette: saturación, ruido y wow."
+        }
+      }
+    },
+    {
+      "name": "Free (varios)",
+      "anonymous": true,
+      "aliases": [],
+      "prefixes": [],
+      "defaultLicense": "Free",
+      "products": {
+        "dexed": {
+          "category": "Synths",
+          "description": "Sintetizador FM gratuito que emula al Yamaha DX7."
+        },
+        "obxd": {
+          "category": "Synths",
+          "description": "Emulación gratuita del Oberheim OB-X, gordo y cálido."
+        },
+        "helm": {
+          "category": "Synths",
+          "description": "Sintetizador sustractivo gratuito y fácil, ideal para aprender."
+        },
+        "odin2": {
+          "category": "Synths",
+          "description": "Sintetizador híbrido gratuito con mucha modulación."
+        },
+        "cardinalfx": {
+          "category": "Modulation",
+          "description": "Entorno modular gratuito tipo VCV Rack como efecto."
+        },
+        "cardinalsynth": {
+          "category": "Synths",
+          "description": "Entorno modular gratuito tipo VCV Rack como sintetizador."
+        },
+        "cardinal": {
+          "category": "Synths",
+          "description": "Entorno modular gratuito tipo VCV Rack."
+        },
+        "synth1": {
+          "category": "Synths",
+          "description": "Clásico sintetizador gratuito inspirado en el Nord Lead 2."
+        },
+        "pg8x": {
+          "category": "Synths",
+          "description": "Emulación gratuita del Roland JX-8P."
+        },
+        "sq8l": {
+          "category": "Synths",
+          "description": "Emulación gratuita del Ensoniq SQ-80."
+        },
+        "decentsampler": {
+          "category": "Samplers",
+          "description": "Sampler gratuito para librerías de Decent Samples."
+        },
+        "sitala": {
+          "category": "Samplers",
+          "description": "Sampler de baterías gratuito, rápido y simple."
+        },
+        "mtpowerdrumkit": {
+          "category": "Samplers",
+          "description": "Batería acústica gratuita con patrones."
+        },
+        "spicyguitar": {
+          "category": "Samplers",
+          "description": "Guitarra acústica sampleada gratuita."
+        },
+        "ojd": {
+          "category": "Saturators/Distortion",
+          "description": "Overdrive gratuito inspirado en un pedal clásico."
+        },
+        "lagrange": {
+          "category": "Reverbs/Delays",
+          "description": "Reverb y delay granulares gratuitos con texturas etéreas."
+        },
+        "deelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay gratuito sencillo, con buen sonido y modulación."
+        },
+        "neuralnote": {
+          "category": "Utilities",
+          "description": "Convierte audio a MIDI usando aprendizaje automático."
+        },
+        "sonobus": {
+          "category": "Utilities",
+          "description": "Envía audio entre músicos por internet con baja latencia."
+        },
+        "gsnap": {
+          "category": "Utilities",
+          "description": "Corrector de afinación gratuito, clásico para efectos tipo autotune."
+        },
+        "kerovee": {
+          "category": "Utilities",
+          "description": "Corrector de afinación gratuito."
+        },
+        "pitchproof": {
+          "category": "Modulation",
+          "description": "Armonizador y cambiador de tono gratuito."
+        },
+        "w1limiter": {
+          "category": "Compressors",
+          "description": "Limitador gratuito de estilo clásico."
+        },
+        "loudmax": {
+          "category": "Compressors",
+          "description": "Maximizador/limitador gratuito muy usado."
+        },
+        "hydelay": {
+          "category": "Reverbs/Delays",
+          "description": "Delay gratuito con modulación y filtros."
+        },
+        "proximity": {
+          "category": "Utilities",
+          "description": "Simula distancia de la fuente con nivel, filtro y retardo."
+        },
+        "pancake": {
+          "category": "Modulation",
+          "description": "Autopan gratuito con forma de LFO dibujable."
+        },
+        "panstation": {
+          "category": "Utilities",
+          "description": "Paneo y anchura estéreo."
+        },
+        "fbvc": {
+          "category": "Compressors",
+          "description": "Compresor de bus gratuito de estilo VCA."
+        },
+        "bucketone": {
+          "category": "Reverbs/Delays",
+          "description": "Delay BBD gratuito con carácter analógico."
+        },
+        "mdaepiano": {
+          "category": "Samplers",
+          "description": "Piano eléctrico Rhodes gratuito y ligero."
+        },
+        "collab3": {
+          "category": "Synths",
+          "description": "Órgano Hammond B3 modelado gratuito."
+        },
+        "thumpone": {
+          "category": "Synths",
+          "description": "Sintetizador de bombos gratuito para generar kicks a medida."
+        },
+        "sk10": {
+          "category": "Synths",
+          "description": "Emulación gratuita del teclado Casio SK-10."
+        },
+        "retrocazio": {
+          "category": "Synths",
+          "description": "Emulación gratuita de teclados Casio vintage."
+        },
+        "=cobalt": {
+          "category": "Synths",
+          "description": "Sintetizador virtual analógico gratuito con 8 osciladores."
+        },
+        "analogwaveforms": {
+          "category": "Synths",
+          "description": "Sintetizador gratuito con formas de onda analógicas sampleadas."
+        }
+      }
+    }
+  ]
+}

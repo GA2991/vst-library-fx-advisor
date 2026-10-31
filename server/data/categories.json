@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Samplers",
+    "keywords": ["sampler", "sample", "rompler", "drum", "drums", "kit", "808", "909", "606", "piano", "epiano", "keys", "keyboard", "keyboards", "rhode", "rhodes", "organ", "strings", "choir", "brass", "orchestral", "orchestra", "saxophone", "sax", "harmonica", "accordion", "mallets", "marimba", "flute", "violin", "cello"]
+  },
+  {
+    "category": "Synths",
+    "keywords": ["synth", "synthesizer", "synthesiser", "303", "lead", "wavetable", "vsti", "poly", "monosynth"]
+  },
+  {
+    "category": "Reverbs/Delays",
+    "keywords": ["reverb", "verb", "rev", "plate", "room", "hall", "chamber", "spring", "delay", "dly", "dla", "echo", "tap", "convolution", "shimmer", "cloud", "clouds", "ambience"]
+  },
+  {
+    "category": "EQs",
+    "keywords": ["eq", "equalizer", "equaliser", "equalizador", "filter", "filters", "pultec", "bandpass", "lowpass", "highpass"]
+  },
+  {
+    "category": "Compressors",
+    "keywords": ["compressor", "compresor", "comp", "compress", "limiter", "limit", "gate", "expander", "transient", "deesser", "deess", "esser", "dynamics", "dyn", "leveler", "leveling", "agc", "glue", "maximizer"]
+  },
+  {
+    "category": "Saturators/Distortion",
+    "keywords": ["saturator", "saturation", "saturate", "distortion", "dist", "drive", "overdrive", "fuzz", "crush", "crusher", "bitcrush", "bit", "tape", "tube", "valve", "valvola", "clip", "clipper", "amp", "ampeg", "lofi", "vinyl", "cassette", "waveshaper", "shaper", "wavefolder", "folder", "decimate", "decimator", "exciter", "excite", "warm", "console", "preamp", "radiator", "rig", "heat", "grit", "dirt", "dirty", "grind", "codec", "radio"]
+  },
+  {
+    "category": "Modulation",
+    "keywords": ["chorus", "flanger", "phaser", "phase", "tremolo", "vibrato", "autopan", "rotary", "leslie", "ensemble", "doubler", "double", "modulator", "modulation", "mod", "ringmod", "ring", "freqshifter", "shifter", "shift", "pitch", "vocoder", "formant", "lfo", "stutter", "glitch", "reverser", "reverse", "doppler", "resonator", "fx", "effects", "multieffect"]
+  },
+  {
+    "category": "Utilities",
+    "keywords": ["utility", "util", "gain", "meter", "metering", "analyzer", "analyser", "scope", "oscilloscope", "tuner", "loudness", "lufs", "stereo", "imager", "width", "haas", "pan", "panner", "mono", "midi", "mixer", "monitor", "headphone", "headphones", "tool", "tools", "generator", "oscillator", "stream", "master", "mastering", "channel", "strip", "correction"]
+  }
+]
