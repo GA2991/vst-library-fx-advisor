@@ -137,3 +137,26 @@ describe('groupPlugins 64-bit twins', () => {
     expect(groups.find((g) => g.id === 'fbvc').files).toHaveLength(2);
   });
 });
+
+describe('links and junctions', () => {
+  it('follows directory junctions', async () => {
+    touch('local/Local.dll');
+    const target = fs.mkdtempSync(path.join(os.tmpdir(), 'vsttarget-'));
+    try {
+      fs.writeFileSync(path.join(target, 'Moved.dll'), Buffer.alloc(5));
+      fs.symlinkSync(target, path.join(root, 'Linked'), 'junction');
+      const { files, errors } = await scanFolders([root]);
+      expect(files.map((f) => f.fileName).sort()).toEqual(['Local.dll', 'Moved.dll']);
+      expect(errors).toEqual([]);
+    } finally {
+      fs.rmSync(target, { recursive: true, force: true });
+    }
+  });
+
+  it('does not loop on a junction pointing to its parent', async () => {
+    touch('A.dll');
+    fs.symlinkSync(root, path.join(root, 'loop'), 'junction');
+    const { files } = await scanFolders([root]);
+    expect(files.map((f) => f.fileName)).toEqual(['A.dll']);
+  });
+});

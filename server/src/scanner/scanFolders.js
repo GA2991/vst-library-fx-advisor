@@ -16,26 +16,31 @@ async function directorySize(dir, errors) {
   }
   for (const entry of entries) {
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) total += await directorySize(full, errors);
-    else if (entry.isFile()) total += (await fs.promises.stat(full)).size;
+    try {
+      if (entry.isDirectory()) total += await directorySize(full, errors);
+      else if (entry.isFile()) total += (await fs.promises.stat(full)).size;
+    } catch (err) {
+      // Un archivo bloqueado dentro del bundle no debe descartar el plugin entero.
+      errors.push({ path: full, message: err.message });
+    }
   }
   return total;
 }
 
-async function toRawFile(full, entry, errors) {
+async function toRawFile(full, name, isDirectory, errors) {
   const stat = await fs.promises.stat(full);
-  const size = entry.isDirectory() ? await directorySize(full, errors) : stat.size;
   return {
     path: full,
-    fileName: entry.name,
-    format: FORMATS[path.extname(entry.name).toLowerCase()],
-    size,
+    fileName: name,
+    format: FORMATS[path.extname(name).toLowerCase()],
+    size: isDirectory ? await directorySize(full, errors) : stat.size,
     mtime: stat.mtime.toISOString(),
     parentDir: path.dirname(full),
   };
 }
 
-async function walk(dir, files, errors) {
+// `visited` guarda rutas reales para seguir junctions y symlinks sin entrar en bucles.
+async function walk(dir, files, errors, visited) {
   let entries;
   try {
     entries = await fs.promises.readdir(dir, { withFileTypes: true });
@@ -47,13 +52,22 @@ async function walk(dir, files, errors) {
     const full = path.join(dir, entry.name);
     const ext = path.extname(entry.name).toLowerCase();
     try {
-      if (entry.isSymbolicLink()) continue;
-      if (entry.isDirectory() && ext === '.vst3') {
-        files.push(await toRawFile(full, entry, errors));
-      } else if (entry.isDirectory()) {
-        await walk(full, files, errors);
-      } else if (entry.isFile() && FORMATS[ext] && !IGNORED.test(entry.name)) {
-        files.push(await toRawFile(full, entry, errors));
+      let isDirectory = entry.isDirectory();
+      let isFile = entry.isFile();
+      if (entry.isSymbolicLink()) {
+        const target = await fs.promises.stat(full);
+        isDirectory = target.isDirectory();
+        isFile = target.isFile();
+      }
+      if (isDirectory && ext === '.vst3') {
+        files.push(await toRawFile(full, entry.name, true, errors));
+      } else if (isDirectory) {
+        const real = (await fs.promises.realpath(full)).toLowerCase();
+        if (visited.has(real)) continue;
+        visited.add(real);
+        await walk(full, files, errors, visited);
+      } else if (isFile && FORMATS[ext] && !IGNORED.test(entry.name)) {
+        files.push(await toRawFile(full, entry.name, false, errors));
       }
     } catch (err) {
       errors.push({ path: full, message: err.message });
@@ -64,6 +78,7 @@ async function walk(dir, files, errors) {
 export async function scanFolders(folders) {
   const files = [];
   const errors = [];
+  const visited = new Set();
   for (const folder of folders) {
     const resolved = path.resolve(folder);
     try {
@@ -73,7 +88,10 @@ export async function scanFolders(folders) {
       errors.push({ path: folder, message: err.code === 'ENOENT' ? 'La carpeta no existe' : err.message });
       continue;
     }
-    await walk(resolved, files, errors);
+    const real = (await fs.promises.realpath(resolved)).toLowerCase();
+    if (visited.has(real)) continue;
+    visited.add(real);
+    await walk(resolved, files, errors, visited);
   }
   return { files, errors };
 }

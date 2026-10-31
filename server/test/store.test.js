@@ -109,3 +109,35 @@ describe('libraryStore', () => {
     expect(again.getLastScanAt()).toBe('t1');
   });
 });
+
+describe('store resilience', () => {
+  it('recovers after a failed write', async () => {
+    const store = createStore(file);
+    await store.load();
+    await store.applyScan([entry('a')], 't1');
+    fs.mkdirSync(`${file}.tmp`);
+    await expect(store.updateOverrides('a', { notes: 'uno' })).rejects.toThrow();
+    fs.rmSync(`${file}.tmp`, { recursive: true, force: true });
+    await store.updateOverrides('a', { notes: 'dos' });
+    const again = createStore(file);
+    await again.load();
+    expect(again.listPlugins()[0].notes).toBe('dos');
+  });
+
+  it('rebuilds the fallback review from the corrected category', async () => {
+    const store = createStore(file);
+    await store.load();
+    const e = entry('a', 'Uncategorized');
+    e.detected.description = 'Plugin de Acme. Sin reseña todavía.';
+    await store.applyScan([e], 't1');
+    const updated = await store.updateOverrides('a', { category: 'EQs' });
+    expect(updated.description).toBe('Ecualizador de Acme. Sin reseña todavía.');
+  });
+
+  it('treats plugins: null as a corrupt file', async () => {
+    fs.writeFileSync(file, JSON.stringify({ version: 1, plugins: null, settings: { folders: [] } }));
+    const store = createStore(file);
+    await store.load();
+    expect(store.listPlugins()).toEqual([]);
+  });
+});

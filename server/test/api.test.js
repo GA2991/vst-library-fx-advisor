@@ -86,7 +86,7 @@ describe('settings and meta', () => {
     const res = await request(app).get('/api/settings');
     expect(res.status).toBe(200);
     expect(res.body.folders).toEqual(['C:\\VST3']);
-    expect(res.body.defaultFolders).toContain('C:\\Program Files\\Common Files\\VST3');
+    for (const f of res.body.defaultFolders) expect(fs.existsSync(f)).toBe(true);
   });
 
   it('PUT /api/settings/folders trims, dedupes and validates', async () => {

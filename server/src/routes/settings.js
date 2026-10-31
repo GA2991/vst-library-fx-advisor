@@ -1,12 +1,12 @@
 import path from 'node:path';
 import { Router } from 'express';
-import { DEFAULT_FOLDERS } from '../scanner/defaultFolders.js';
+import { detectDefaultFolders } from '../scanner/defaultFolders.js';
 
 export function settingsRoutes({ store }) {
   const router = Router();
 
-  router.get('/settings', (req, res) => {
-    res.json({ ...store.getSettings(), defaultFolders: DEFAULT_FOLDERS });
+  router.get('/settings', async (req, res) => {
+    res.json({ ...store.getSettings(), defaultFolders: await detectDefaultFolders() });
   });
 
   router.put('/settings/folders', async (req, res, next) => {

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { detectDefaultFolders } from '../scanner/defaultFolders.js';
+import { describe, isFallbackDescription } from '../classifier/classify.js';
 
 export class NotFoundError extends Error {}
 
@@ -12,14 +13,33 @@ function emptyData(folders) {
 
 function resolve(record) {
   const { detected, overrides } = record;
+  const category = overrides.category ?? detected.category;
+  const vendor = overrides.vendor ?? detected.vendor;
+  let description = overrides.description ?? detected.description ?? '';
+  // La reseña automática se rehace con la categoría y el fabricante que corrigió el usuario.
+  if (overrides.description === undefined && isFallbackDescription(description)) {
+    description = describe(record.name, vendor, category);
+  }
   return {
     ...record,
-    category: overrides.category ?? detected.category,
+    category,
     license: overrides.license ?? detected.license,
-    vendor: overrides.vendor ?? detected.vendor,
+    vendor,
     notes: overrides.notes ?? '',
-    description: overrides.description ?? detected.description ?? '',
+    description,
   };
+}
+
+// En Windows el antivirus o OneDrive pueden bloquear el archivo un instante.
+async function renameWithRetry(from, to, attempts = 5) {
+  for (let i = 1; ; i += 1) {
+    try {
+      return await fs.promises.rename(from, to);
+    } catch (err) {
+      if (i >= attempts || !['EPERM', 'EBUSY', 'EACCES'].includes(err.code)) throw err;
+      await new Promise((r) => setTimeout(r, 50 * i));
+    }
+  }
 }
 
 export function createStore(filePath) {
@@ -29,13 +49,15 @@ export function createStore(filePath) {
 
   function save() {
     const snapshot = JSON.stringify(data, null, 2);
-    writing = writing.then(async () => {
+    const run = writing.then(async () => {
       await fs.promises.mkdir(path.dirname(filePath), { recursive: true });
       const tmp = `${filePath}.tmp`;
       await fs.promises.writeFile(tmp, snapshot, 'utf8');
-      await fs.promises.rename(tmp, filePath);
+      await renameWithRetry(tmp, filePath);
     });
-    return writing;
+    // Un fallo puntual no debe bloquear las escrituras siguientes.
+    writing = run.catch(() => {});
+    return run;
   }
 
   async function load() {
@@ -49,7 +71,9 @@ export function createStore(filePath) {
     }
     try {
       const parsed = JSON.parse(raw);
-      if (!parsed || typeof parsed.plugins !== 'object') throw new Error('Formato inválido');
+      const validPlugins = parsed?.plugins && typeof parsed.plugins === 'object' && !Array.isArray(parsed.plugins);
+      const validFolders = parsed?.settings?.folders === undefined || Array.isArray(parsed.settings.folders);
+      if (!validPlugins || !validFolders) throw new Error('Formato inválido');
       data = { ...emptyData([]), ...parsed, settings: { folders: [], ...parsed.settings } };
     } catch {
       const stamp = new Date().toISOString().replace(/[:.]/g, '-');
