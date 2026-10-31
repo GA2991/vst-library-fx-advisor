@@ -11,20 +11,25 @@ function formatSize(bytes) {
 
 function ResetButton({ label, onClick }) {
   return (
-    <button type="button" onClick={onClick} title={`Restablecer ${label}`} aria-label={`Restablecer ${label}`} className="flex h-8 w-8 items-center justify-center rounded-md text-violet-400 hover:bg-zinc-800">
-      <RotateCcw size={14} aria-hidden="true" />
-    </button>
+    <span className="flex items-center gap-1">
+      <span title="Editado por ti" className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+      <button type="button" onClick={onClick} title={`Restablecer ${label}`} aria-label={`Restablecer ${label}`} className="flex h-8 w-8 items-center justify-center rounded-md text-violet-400 hover:bg-zinc-800">
+        <RotateCcw size={14} aria-hidden="true" />
+      </button>
+    </span>
   );
 }
 
 export default function PluginRow({ plugin, meta, onUpdate }) {
   const [notes, setNotes] = useState(plugin.notes);
   const [description, setDescription] = useState(plugin.description);
+  const [vendor, setVendor] = useState(plugin.vendor);
   const [open, setOpen] = useState(false);
   const o = plugin.overrides ?? {};
 
   useEffect(() => setNotes(plugin.notes), [plugin.notes]);
   useEffect(() => setDescription(plugin.description), [plugin.description]);
+  useEffect(() => setVendor(plugin.vendor), [plugin.vendor]);
 
   const cell = 'border-b border-zinc-900 px-4 py-2.5 align-middle';
 
@@ -96,6 +101,25 @@ export default function PluginRow({ plugin, meta, onUpdate }) {
         <tr>
           <td colSpan={7} className="border-b border-zinc-900 bg-zinc-900/40 px-4 py-4">
             <div className="flex max-w-3xl flex-col gap-2 pl-8">
+              <label htmlFor={`vendor-${plugin.id}`} className="text-xs font-medium text-zinc-400">
+                Fabricante {o.vendor ? '(editado por ti)' : ''}
+              </label>
+              <div className="flex flex-wrap items-center gap-2">
+                <input
+                  id={`vendor-${plugin.id}`}
+                  value={vendor}
+                  placeholder="Fabricante desconocido"
+                  onChange={(e) => setVendor(e.target.value)}
+                  onBlur={() => vendor !== plugin.vendor && onUpdate(plugin.id, { vendor: vendor.trim() })}
+                  onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
+                  className="min-h-9 w-72 max-w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 text-[13px] text-zinc-200 placeholder:text-zinc-600 focus:border-violet-500 focus:outline-none"
+                />
+                {o.vendor !== undefined && (
+                  <button type="button" onClick={() => onUpdate(plugin.id, { vendor: null })} className="min-h-9 rounded-lg border border-zinc-800 px-3 text-[13px] text-zinc-300 hover:bg-zinc-800">
+                    Restablecer fabricante
+                  </button>
+                )}
+              </div>
               <label htmlFor={`desc-${plugin.id}`} className="text-xs font-medium text-zinc-400">
                 Reseña {o.description ? '(editada por ti)' : ''}
               </label>
