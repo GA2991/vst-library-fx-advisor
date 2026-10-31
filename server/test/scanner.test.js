@@ -128,3 +128,12 @@ describe('real-world names', () => {
     expect(files.map((f) => f.fileName)).toEqual(['C1.dll']);
   });
 });
+
+describe('groupPlugins 64-bit twins', () => {
+  it('merges "name64" into "name" when both exist', () => {
+    const f = (fileName) => ({ path: fileName, fileName, format: 'VST2', size: 1, mtime: '2024-01-01T00:00:00.000Z', parentDir: 'x' });
+    const groups = groupPlugins([f('fbvc.dll'), f('fbvc64.dll'), f('Solo64.dll')]);
+    expect(groups.map((g) => g.id).sort()).toEqual(['fbvc', 'solo64']);
+    expect(groups.find((g) => g.id === 'fbvc').files).toHaveLength(2);
+  });
+});

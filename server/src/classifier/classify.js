@@ -35,7 +35,7 @@ export function tokens(name) {
 }
 
 // Palabras cortas solo cuentan como palabra completa; las largas, como fragmento del nombre.
-function keywordMatches(keyword, name) {
+export function keywordMatches(keyword, name) {
   const key = compact(keyword);
   if (key.length <= 3) return tokens(name).includes(key);
   return compact(name).includes(key);
@@ -124,11 +124,15 @@ export function detectLicense(name, vendorName) {
   return vendor?.defaultLicense ?? 'Unknown';
 }
 
+const FALLBACK_SUFFIX = 'Sin reseña todavía.';
+
+export const isFallbackDescription = (text) => text.endsWith(FALLBACK_SUFFIX);
+
 export function describe(name, vendorName, category) {
   const product = findProduct(name, vendorName);
   if (product?.product.description) return product.product.description;
   const kind = SINGULAR[category] ?? 'Plugin';
-  return `${kind} de ${vendorName || 'fabricante desconocido'}. Sin reseña todavía.`;
+  return `${kind} de ${vendorName || 'fabricante desconocido'}. ${FALLBACK_SUFFIX}`;
 }
 
 export function classify(group) {

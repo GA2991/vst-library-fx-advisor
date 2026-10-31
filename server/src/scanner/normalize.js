@@ -32,6 +32,18 @@ export function groupPlugins(files) {
     // Preferimos el nombre del VST3, que suele venir sin sufijos raros.
     if (file.format === 'VST3') group.name = displayName;
   }
+  // "fbvc64.dll" junto a "fbvc.dll" es la versión de 64 bits del mismo plugin.
+  for (const [key, group] of groups) {
+    const base = key.endsWith('64') ? groups.get(key.slice(0, -2)) : null;
+    if (!base || base === group) continue;
+    for (const file of group.files) {
+      base.files.push(file);
+      if (!base.formats.includes(file.format)) base.formats.push(file.format);
+    }
+    base.size = Math.max(base.size, group.size);
+    if (group.mtime > base.mtime) base.mtime = group.mtime;
+    groups.delete(key);
+  }
   for (const group of groups.values()) group.formats.sort();
   return [...groups.values()];
 }

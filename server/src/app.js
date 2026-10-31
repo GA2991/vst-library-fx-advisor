@@ -2,6 +2,7 @@ import express from 'express';
 import { createScanService } from './scanService.js';
 import { pluginRoutes } from './routes/plugins.js';
 import { settingsRoutes } from './routes/settings.js';
+import { chainRoutes } from './routes/chains.js';
 
 export function createApp({ store, scanFolders } = {}) {
   const app = express();
@@ -13,6 +14,7 @@ export function createApp({ store, scanFolders } = {}) {
     const scanService = createScanService({ store, scanFolders });
     app.use('/api', pluginRoutes({ store, scanService }));
     app.use('/api', settingsRoutes({ store }));
+    app.use('/api', chainRoutes({ store }));
   }
 
   app.use((err, req, res, next) => {
