@@ -9,7 +9,17 @@ App local para Windows que escanea tus carpetas de plugins VST, los clasifica po
 
 Todo funciona en local: no hay llamadas a internet y el servidor solo acepta conexiones desde tu propio equipo.
 
-## Requisitos
+## Versión portable (sin instalar nada)
+
+Descomprime `VST-Library-FX-Advisor-v<versión>-win-x64.zip`, haz doble clic en **`Iniciar.bat`** y la app se abre en el navegador (<http://127.0.0.1:4317>). Deja abierta la ventana negra mientras la uses y ciérrala para salir. Lleva su propio Node.js y guarda tus datos en su carpeta `data`; para actualizar, copia esa carpeta a la versión nueva.
+
+Para generar el .zip (en `dist-portable/`):
+
+```bash
+npm run build:portable
+```
+
+## Requisitos (para desarrollo)
 
 - Windows 10 u 11
 - [Node.js](https://nodejs.org) 20 o superior (LTS)
