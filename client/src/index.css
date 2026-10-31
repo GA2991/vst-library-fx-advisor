@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+select option {
+  background-color: #18181b;
+}
