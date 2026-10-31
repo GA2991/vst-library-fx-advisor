@@ -4,7 +4,7 @@ import { detectDefaultFolders } from '../scanner/defaultFolders.js';
 
 export class NotFoundError extends Error {}
 
-const OVERRIDE_FIELDS = ['category', 'license', 'vendor', 'notes'];
+const OVERRIDE_FIELDS = ['category', 'license', 'vendor', 'notes', 'description'];
 
 function emptyData(folders) {
   return { version: 1, settings: { folders }, lastScanAt: null, plugins: {} };
@@ -18,6 +18,7 @@ function resolve(record) {
     license: overrides.license ?? detected.license,
     vendor: overrides.vendor ?? detected.vendor,
     notes: overrides.notes ?? '',
+    description: overrides.description ?? detected.description ?? '',
   };
 }
 

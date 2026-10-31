@@ -81,12 +81,12 @@
 - Test: `server/test/store.test.js`
 
 **Interfaces:**
-- Consume: `PluginGroup` (Tarea 2); `Detected = { category, license, vendor }` (Tarea 4 lo calcula; aquí llega ya resuelto).
+- Consume: `PluginGroup` (Tarea 2); `Detected = { category, license, vendor, description }` (Tarea 4 lo calcula; aquí llega ya resuelto).
 - Produce: `createStore(filePath) -> Store` con:
   - `load() -> Promise<void>`; `getSettings() -> { folders: string[] }`; `setFolders(folders: string[]) -> Promise<void>`
   - `applyScan(entries: (PluginGroup & { detected: Detected })[], scannedAt: string) -> Promise<{ added, updated, missing }>`
-  - `listPlugins() -> Plugin[]`; `updateOverrides(id, patch: { category?, license?, vendor?, notes? }) -> Promise<Plugin>` (`null` en un campo borra ese override; id inexistente → lanza `NotFoundError`).
-  - `Plugin = PluginGroup & { detected, overrides, missing: boolean, category, license, vendor, notes }` (los últimos cuatro ya resueltos: override ?? detected; `notes` por defecto `''`).
+  - `listPlugins() -> Plugin[]`; `updateOverrides(id, patch: { category?, license?, vendor?, notes?, description? }) -> Promise<Plugin>` (`null` en un campo borra ese override; id inexistente → lanza `NotFoundError`).
+  - `Plugin = PluginGroup & { detected, overrides, missing: boolean, category, license, vendor, notes, description }` (ya resueltos: override ?? detected; `notes` por defecto `''`).
 - Formato en disco: `{ version: 1, settings: { folders }, lastScanAt, plugins: { [id]: { ...PluginGroup, detected, overrides, missing } } }`. Escritura atómica: escribir `*.tmp` y luego `rename`.
 
 - [ ] **Paso 1: Tests que fallan:**
@@ -106,9 +106,9 @@
 - Test: `server/test/classify.test.js`
 
 **Interfaces:**
-- Produce: `classify(group: PluginGroup) -> Detected` y las funciones auxiliares `detectVendor(group)`, `detectCategory(name, vendor)`, `detectLicense(name, vendor)`.
+- Produce: `classify(group: PluginGroup) -> Detected` y las funciones auxiliares `detectVendor(group)`, `detectCategory(name, vendor)`, `detectLicense(name, vendor)`, `describe(name, vendor, category) -> string` (reseña del diccionario en español o, si no hay, "<Categoría en singular> de <fabricante>. Sin reseña todavía." / "… de fabricante desconocido. …"). Al menos 150 productos con reseña.
 - `categories.json`: lista **ordenada** `[{ category, keywords: string[] }]`; gana la primera categoría con coincidencia (por eso `Samplers` y `Synths` van antes que `EQs` para que "Kontakt EQ" no caiga en EQ). Coincidencia por palabra/token, sin distinguir mayúsculas.
-- `vendors.json`: `{ vendors: [{ name, aliases: string[], prefixes: string[], defaultLicense: 'Free'|'Paid', products?: { [productKeyword]: { license?, category? } } }], freeTags: string[] }`. `freeTags` incluye `free`, `lite`, `le`, `ce`, `(free)`. Al menos 60 fabricantes comunes (FabFilter, Valhalla DSP, Xfer, u-he, Native Instruments, Waves, iZotope, Soundtoys, TDR, Melda, Airwindows, Voxengo, Vital, Spitfire, Arturia, Plugin Alliance/brainworx, Slate Digital, Kilohearts, Baby Audio, Analog Obsession, Klevgrand, etc.), con excepciones por producto donde se mezclan gratis y de pago (TDR Nova → Free, Nova GE → Paid; Vital → Free; Kilohearts Essentials → Free).
+- `vendors.json`: `{ vendors: [{ name, aliases: string[], prefixes: string[], defaultLicense: 'Free'|'Paid', products?: { [productKeyword]: { license?, category?, description? } } }], freeTags: string[] }`. `freeTags` incluye `free`, `lite`, `le`, `ce`, `(free)`. Al menos 60 fabricantes comunes (FabFilter, Valhalla DSP, Xfer, u-he, Native Instruments, Waves, iZotope, Soundtoys, TDR, Melda, Airwindows, Voxengo, Vital, Spitfire, Arturia, Plugin Alliance/brainworx, Slate Digital, Kilohearts, Baby Audio, Analog Obsession, Klevgrand, etc.), con excepciones por producto donde se mezclan gratis y de pago (TDR Nova → Free, Nova GE → Paid; Vital → Free; Kilohearts Essentials → Free).
 
 - [ ] **Paso 1: Tests que fallan** (tabla `it.each`):
   - categoría: `Pro-Q 3` → `EQs`; `Pro-C 2` → `Compressors`; `ValhallaVintageVerb` → `Reverbs/Delays`; `EchoBoy` → `Reverbs/Delays`; `Decapitator` → `Saturators/Distortion`; `Serum` → `Synths`; `Kontakt 7` → `Samplers`; `MicroShift` → `Modulation`; `MCompressor` → `Compressors`; `Youlean Loudness Meter` → `Utilities`; `Zxqwv` → `Uncategorized`.
@@ -129,7 +129,7 @@
 - Consume: `scanFolders`, `groupPlugins` (T2), `createStore` (T3), `classify` (T4).
 - Produce: `createScanService({ store, scanFolders }) -> { run() -> Promise<ScanResult>, isRunning() }` con `ScanResult = { added, updated, missing, total, errors, scannedAt }`. Rutas:
   - `GET /api/plugins` → `{ plugins: Plugin[], lastScanAt }`
-  - `PATCH /api/plugins/:id` body `{ category?, license?, vendor?, notes? }` → `Plugin`; `400` si la categoría o licencia no está en las listas exactas; `404` si no existe.
+  - `PATCH /api/plugins/:id` body `{ category?, license?, vendor?, notes?, description? }` → `Plugin`; `400` si la categoría o licencia no está en las listas exactas; `404` si no existe.
   - `POST /api/scan` → `ScanResult`; `409 { error: 'scan_in_progress' }` si ya hay uno en curso.
   - `GET /api/settings` → `{ folders, defaultFolders }`; `PUT /api/settings/folders` body `{ folders: string[] }` → `{ folders }` (se recortan, deduplican y deben ser rutas absolutas; si no, `400`).
   - `GET /api/meta` → `{ categories, licenses }`.
@@ -184,6 +184,7 @@
 
 - [ ] **Paso 1:** Barra superior: buscador (nombre y fabricante), filtro de categoría, filtro de licencia, conmutador "Mostrar no encontrados" (desactivado por defecto) y botón "Escanear" con spinner (si devuelve 409 muestra "Ya hay un escaneo en curso"). `StatsBar` con el total y el conteo por categoría como chips clicables que aplican el filtro.
 - [ ] **Paso 2:** Tabla: nombre, fabricante, formatos (badges), categoría (`<select>`), licencia (`<select>`), tamaño (MB), fecha, notas (input que guarda al perder el foco). Las celdas con override se marcan con un punto de acento y tienen la opción "Restablecer" (envía `null`). Actualización optimista con revertido si falla.
+- [ ] **Paso 2b:** Componente `client/src/components/PluginTooltip.jsx` (`<PluginTooltip plugin={...}>{children}</PluginTooltip>`): aparece tras 600 ms con el cursor quieto sobre el nombre (también con foco de teclado), se cancela al salir o al hacer clic; muestra `description`, categoría, licencia y `notes`. En la fila, la reseña es editable en un panel de detalle (guarda `description`; "Restablecer" envía `null`).
 - [ ] **Paso 3:** Estado vacío: "Aún no hay plugins. Revisa tus carpetas en Ajustes y pulsa Escanear."
 - [ ] **Paso 4:** Verificar en el navegador contra el escaneo real: filtrar, editar categoría y notas, recargar la página → los cambios persisten; volver a escanear → siguen ahí. Commit `feat: add library view`.
 
@@ -197,7 +198,7 @@
 
 - [ ] **Paso 1:** Rejilla de tarjetas de situación (icono, nombre, descripción); al elegir una se carga su cadena.
 - [ ] **Paso 2:** Interruptor segmentado "Recomendación general" / "Solo plugins Free" que vuelve a pedir `getChain(id, freeOnly)`. Con `freeOnly` y `unknownCount > 0` muestra "N plugins con licencia desconocida no se incluyen — revísalos en Biblioteca".
-- [ ] **Paso 3:** `ChainStep`: número, etiqueta, `why`, plugin sugerido destacado, desplegable de alternativas y botón "Otra sugerencia" (icono `Shuffle`) que avanza el índice de forma circular sobre `candidates`. Sin candidatos → "Sin plugin en tu biblioteca para este paso". Pasos conectados verticalmente con una línea.
+- [ ] **Paso 3:** `ChainStep`: número, etiqueta, `why`, plugin sugerido destacado, desplegable de alternativas y botón "Otra sugerencia" (icono `Shuffle`) que avanza el índice de forma circular sobre `candidates`. Sin candidatos → "Sin plugin en tu biblioteca para este paso". El nombre del plugin sugerido y cada opción del desplegable usan `PluginTooltip` (Tarea 8). Pasos conectados verticalmente con una línea.
 - [ ] **Paso 4:** Verificar en el navegador: las 8 cadenas cargan, el interruptor cambia los resultados y la rotación recorre las alternativas. Commit `feat: add fx chains view`.
 
 ### Tarea 10: Vista Ajustes

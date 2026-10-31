@@ -79,6 +79,17 @@ describe('libraryStore', () => {
     expect(updated.overrides).toEqual({});
   });
 
+  it('resolves description from override, then detected', async () => {
+    const store = createStore(file);
+    await store.load();
+    const e = entry('a');
+    e.detected.description = 'Reseña detectada.';
+    await store.applyScan([e], 't1');
+    expect(store.listPlugins()[0].description).toBe('Reseña detectada.');
+    const updated = await store.updateOverrides('a', { description: 'Mi reseña.' });
+    expect(updated.description).toBe('Mi reseña.');
+  });
+
   it('throws NotFoundError for unknown ids', async () => {
     const store = createStore(file);
     await store.load();

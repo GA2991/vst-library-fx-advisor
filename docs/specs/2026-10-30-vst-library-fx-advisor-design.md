@@ -52,6 +52,11 @@ Empieza como herramienta personal, pero la intención es **compartirla** con otr
 ### Licencias
 Detección `Free` / `Paid` / `Unknown` a partir de una lista interna de fabricantes conocidos y de etiquetas en el nombre (p. ej. "Free", "Lite", "CE"). Editable en la interfaz.
 
+### Reseñas al pasar el cursor
+- Al dejar el cursor quieto ~0,6 s sobre un plugin (sin clic), aparece un tooltip con una reseña breve de lo que hace, su categoría, la licencia y las notas del usuario si las hay. Funciona en la Biblioteca y en los pasos de las Cadenas.
+- Origen 100 % local (decidido por el usuario): reseñas de 1–2 frases en el diccionario incluido (`vendors.json`, por producto); si no hay, un texto automático a partir de la categoría y el fabricante ("Compresor de Universal Audio. Sin reseña todavía.").
+- El usuario puede escribir o corregir la reseña; se guarda como override y un re-escaneo no la pisa.
+
 ### Cadenas
 - ~8 situaciones predefinidas: Voz principal limpia, Coros/Voces de fondo, Bajo directo, Kick, Snare punchy, Guitarra eléctrica, Pads ambientales, Bus de mezcla.
 - Cada una con 3–6 pasos ordenados, cada paso con una categoría (y palabras clave opcionales para afinar, p. ej. "de-esser") y una línea de explicación.
